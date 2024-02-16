@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: whitesmoke;
+}
+form input, select {
+    width: 250px;
+}
+#addProduct {
+    width: 150px;
+}
+.formDiv {
+    background: white;
+    /* background: linear-gradient(90deg, rgba(70,244,172,1) 0%, rgba(116,244,218,1) 50%, rgba(70,244,172,1) 100%); */
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 6px;
+}
+#salePrice, #discountValue, #productPrice, #totalPrice, #deliveryCharges {
+    border: none;
+}
+label {
+    width: 200px;
+    display: inline-block;
+    /* color: whitesmoke; */
+}
+#discountPercentage, #discountFlat{
+    display: none;
+}
+.star {
+    color: red;
+}
+#error , #percentageError, #flatError {
+    color: red;
+    display: none;
+}
+.btn-container {
+    display: flex;
+}
+#minus, #plus, #numberBox {
+    width:50px;
+    border: 1px solid rgb(222, 220, 220);
+    font-size: 25px;
+    text-align: center;
+}
+#errorNumber {
+    color: red;
+    display: none;
+    margin-left: 5px;
+}
+#deliveryCharges, #discountValue {
+    color: green;
+    font-weight: bold;
+}
+#totalPrice {
+    font-weight: bold;
+}
+.backtoproduct {
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
