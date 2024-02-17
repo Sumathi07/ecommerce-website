@@ -5,6 +5,8 @@
 }
 body {
     background: whitesmoke;
+    /* background: rgb(81,84,83);
+    background: linear-gradient(90deg, rgba(81,84,83,1) 0%, rgba(26,28,27,1) 50%, rgba(81,84,83,1) 100%); */
 }
 form input, select {
     width: 250px;
@@ -33,7 +35,7 @@ label {
 .star {
     color: red;
 }
-#error , #percentageError, #flatError {
+#error , #percentageError, #flatError, #productImageError, #productNameError, #productDescError, #discountError, #maxQuantityError {
     color: red;
     display: none;
 }
@@ -62,4 +64,10 @@ label {
     display: flex;
     justify-content: right;
     margin-right: 40px;
+}
+.nodisplay {
+    display: none;
+}
+.descnoborder {
+    border: none;
 }
