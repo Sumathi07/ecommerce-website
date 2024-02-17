@@ -9,29 +9,40 @@
 </head>
 <body>
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12 col-sm-12"> 
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <!-- <div class="col-lg-5 col-md-12 col-sm-12"> 
                     <img src="./assets/image/palmtree.jpg" class="mt-3" alt="Adenium Plant" width="400px" height="400px">
-                </div>
-                <div class="col-lg-7 col-md-12 col-sm-12">
-                    <h1>Online Plants</h1>
-                    <h3>Palm tree plant</h3>
-                    <p>Areca Palms are well-known for their air purifying skills. But they are also easy palms to grow. Give them bright indirect light and keep moist but also providing good drainage so that their roots will not rot. A very lush and full palm when they reach maturity!</p>
+                </div> -->
+                <div class="col-lg-6 col-md-12 col-sm-12">      
+
+                    <h4 style="text-align: center;color: green;">ADD PRODUCT DETAILS</h4>
                     <div class="formDiv">
                         <form>
                             <div class="mb-3">
+                                <label for="productName">Product Name: <span class="star">*</span>  </label>
+                                <input type="text" name="productName" id="productName" placeholder="Enter Product Name"><span id="productNameError">Please enter product name</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productDesc">Product Description: <span class="star">*</span>  </label>
+                                <textarea name="productDesc" id="productDesc" cols="60" rows="6"></textarea><span id="productDescError">Please enter product desciption</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="productImage">Product Image: <span class="star">*</span>  </label>
+                                <input type="file" name="productImage" id="productImage" onchange="validateFileUpload(event)"><span id="productImageError">Allows only file types of GIF, PNG, JPG, JPEG and BMP.</span>
+                            </div>
+                            <div class="mb-3">
                                 <label for="originalPrice">Enter the Original Price:   <span class="star">*</span></label>
-                                <input type="text" name="originalPrice" id="originalPrice" placeholder="Enter Original Price" onblur="validateNumber()">
+                                ₹ <input type="text" name="originalPrice" id="originalPrice" placeholder="Enter Original Price" onblur="validateNumber()">
                                 <span id="error">Please enter only number value</span>
                             </div>
                             <div class="mb-3">
-                                <label for="discount">Select Your Discount: <span class="star">*</span>  </label>
+                                <label for="discount">Select Discount Type: <span class="star">*</span>  </label>
                                 <select name="discount" id="discount" onchange="selectDiscount(event)">
                                     <option value="">Select Discount</option>
                                     <option value="P">Percentage</option>
                                     <option value="F">Flat</option>
-                                </select>
+                                </select><span id="discountError">Please select discount type</span>
                             </div>
                             <div id="discountPercentage" class="mb-3">
                                 <label for="percentage">Enter the Percentage:<span class="star">*</span>   </label>
@@ -45,13 +56,18 @@
                             </div>
                             <div class="mb-3">
                                 <label for="discountValue">Discount:   </label>
-                                <input type="text" disabled name="discountValue" id="discountValue">
+                                ₹ <input type="text" disabled name="discountValue" id="discountValue">
                             </div>
                             <div class="mb-3">
                                 <label for="salePrice">Sale Price:   </label>
-                                <input type="text" disabled name="salePrice" id="salePrice">
+                                ₹ <input type="text" disabled name="salePrice" id="salePrice">
                             </div>
-                            <div>
+                            <div class="mb-3">
+                                <label for="maxQuantity">Maximum Quantity :  <span class="star">*</span> </label>
+                                <input type="text" name="maxQuantity" id="maxQuantity">
+                                <span id="maxQuantityError">Maximum quantity Required</span>
+                            </div>
+                            <div style="text-align: center;">
                                 <input type="button" class="btn btn-success" name="addProduct" id="addProduct" value="Add Product" onclick="nextPage()">
                             </div>
                         </form>

@@ -8,20 +8,28 @@
     <title>Product Info</title>
 </head>
 <body onload="setValues()">
-    <h1>Product Info</h1>
+    
     <!-- <a class="backtoproduct" href="./index.html">back to the product</a> -->
     <main>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12"> 
-                    <img src="./assets/image/palmtree.jpg" alt="Adenium Plant" width="400px" height="400px">
+                    <img id="imagePreview" src="" alt="Product Image" width="400px" height="400px">
                 </div>
+
                 <div class="col-lg-7 col-md-12 col-sm-12">
-                    <h1>Online Plants</h1>
-                    <h3>Palm tree plant</h3>
+                    <h2>Product Quantity</h2>
+                    <h2 id="productName"></h2>
+                    <!-- <p id="desc"></p> -->
+                    <!-- <h3>Palm tree plant</h3> -->
+                    <textarea name="desc" class="descnoborder" id="desc" disabled cols="85" rows="4"></textarea>
+                    <!-- <div>
+                        <p id="desc"></p>
+                    </div> -->
                     <div class="formDiv">
                         <form>
                             <div class="btn-container">
+                                
                                 <div class="mb-3">
                                     <input type="button" id="minus" value="-" onclick="addMore('M')">
                                 </div>
@@ -31,17 +39,21 @@
                                 
                                 <div class="mb-3">
                                     <input type="button" id="plus" value="+" onclick="addMore('P')">
-                                </div><span id="errorNumber">Quantity should be between 1 to 10</span>
+                                </div><span id="errorNumber">Quantity should be between 1 to {{quantity}}</span>
                             </div>
                             <div class="mb-3">
+                                <label for="maxQuantity">Maximum Quantity:</label>
+                                <input type="text" disabled name="maxQuantity" id="maxQuantity">
+                            </div>
+                            <div class="nodisplay mb-3">
                                 <label for="originalPrice">Product's Original Price:</label>
                                 <input type="text" disabled name="originalPrice" id="originalPrice">
                             </div>
-                            <div class="mb-3">
+                            <div class="nodisplay mb-3">
                                 <label for="discountValue">Discount:   </label>
                                 <input type="text" disabled name="discountValue" id="discountValue">
                             </div>
-                            <div class="mb-3">
+                            <div class="nodisplay mb-3">
                                 <label for="salePrice">Sale Price:   </label>
                                 <input type="text" disabled name="salePrice" id="salePrice">
                             </div>

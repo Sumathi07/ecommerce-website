@@ -9,26 +9,32 @@
 </head>
 <body onload="getProductDetails()">
     <main>
-        <div class="container">
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12"> 
-                    <img src="./assets/image/palmtree.jpg" class="mt-3" alt="Adenium Plant" width="400px" height="400px">
+                    <img id="imagePreview" src="" class="mt-3" alt="Adenium Plant" width="400px" height="400px">
                 </div>
                 <div class="col-lg-7 col-md-12 col-sm-12">
-                    <h1>Online Plants</h1>
+                    <!-- <h1>Online Plants</h1>
                     <h3>Palm tree plant</h3>
-                    <p>Areca Palms are well-known for their air purifying skills. But they are also easy palms to grow. Give them bright indirect light and keep moist but also providing good drainage so that their roots will not rot. A very lush and full palm when they reach maturity!</p>
+                    <p>Areca Palms are well-known for their air purifying skills. But they are also easy palms to grow. Give them bright indirect light and keep moist but also providing good drainage so that their roots will not rot. A very lush and full palm when they reach maturity!</p> -->
+                    <h2 id="productName"></h2>
+                    <textarea name="desc" class="descnoborder" id="desc" disabled cols="85" rows="4"></textarea>
                     <div class="formDiv">
                         <form>
                             <h5>PRICE DETAILS</h5>
                             <hr>
                             <div class="mb-3">
-                                <label for="productPrice">Product Price: </label>
-                                <input type="text" disabled name="productPrice" id="productPrice">
+                                <label for="originalPrice">Product's Original Price: </label>
+                                ₹ <input type="text" disabled name="originalPrice" id="originalPrice">
+                            </div>
+                            <div class="mb-3">
+                                <label for="productPrice">No of items - <span id="noofItems">({{items}})</span></label>
+                                ₹ <input type="text" disabled name="productPrice" id="productPrice">
                             </div>
                             <div class="mb-3">
                                 <label for="discountValue">Discount:   </label>
-                                <input type="text" disabled name="discountValue" id="discountValue">
+                                ₹ <input type="text" disabled name="discountValue" id="discountValue">
                             </div>
                             <div class="mb-3">
                                 <label for="deliveryCharges">Delivery Charges: </label>
@@ -37,11 +43,13 @@
                             <hr>
                             <div class="mb-3">
                                 <label for="totalPrice"><strong> Total Amount: </strong>   </label>
-                                <input type="text" disabled name="totalPrice" id="totalPrice">
+                                ₹ <input type="text" disabled name="totalPrice" id="totalPrice">
                             </div>
                             <hr>
                             <!-- <span id="">You will save {{discountValue}} on this order</span> -->
-                            
+                            <div style="text-align: right;">
+                                <input type="button" class="btn btn-success" name="addProduct" id="addProduct" value="Add More Product" onclick="addMoreProduct()">
+                            </div>
                         </form>
                     </div>
 
